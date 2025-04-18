@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import Hero from './Hero.jsx';
+import { HashRouter } from 'react-router-dom';
 import TechCarousel from './TechCarousel';
 import ProjectsSection from './ProjectsSection';
 import ContactSection from './ContactSection';
@@ -96,6 +97,9 @@ function App() {
           <ContactSection />
         </section>
       </main>
+      <HashRouter>
+      {/* rutas */}
+    </HashRouter>
     </div>
   );
 }
