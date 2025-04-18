@@ -1,0 +1,167 @@
+/* Contenedor general del carousel */
+.tech-carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3rem 0;
+    width: 100%;
+  }
+  
+  /* Contenedor "viewport" de los ítems */
+  .tech-items-container {
+    width: 100%;
+    max-width: 1000px; /* Ajusta según el ancho deseado del carousel */
+    overflow: hidden;
+    background-color: rgb(114, 90, 113); /* Color de fondo del carousel */
+    border-radius: 20px; /* Bordes redondeados */   
+    padding: 50px;  
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: relative; /* Para posicionar las flechas correctamente */
+    display: flex;
+    color: #fff; /* Color del texto */
+  }
+  
+  /* Contenedor que agrupa los ítems en fila, con transición para el deslizamiento */
+  .tech-items {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Cada ítem del carousel */
+  .tech-item {
+    min-width: 300px;      /* Debe coincidir con el 'itemWidth' definido en el componente */
+    flex-shrink: 0;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .tech-item:hover {
+    transform: scale(1.15); /* Efecto de zoom al pasar el mouse */
+    transition: transform 0.5s ease;
+    cursor: pointer;
+  }
+  
+  /* Ajuste de la imagen */
+  .tech-item img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+  }
+  
+  /* Estilo del nombre (asegura que no se corte) */
+  .tech-item h3 {
+    margin-top: 16px;
+    font-size: 1.5rem;
+    white-space: nowrap; /* Si prefieres que el nombre se mantenga en una línea */
+    overflow: visible;
+    color: #fff; /* Color del texto */
+  }
+  
+  /* Contenedor de flechas debajo del carousel */
+  .carousel-arrows {
+    margin-top: 50px;
+    display: flex;
+    gap: 50px;
+  }
+  
+  /* Estilo para las flechas */
+  .arrow {
+    background-color: rgb(126, 97, 124);
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    width: 60px;           /* Ancho del botón */
+    height: 60px;          /* Altura del botón */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: flex;         /* Para centrar el contenido */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .arrow:hover {
+    background: linear-gradient(45deg,rgb(115, 97, 129),rgb(120, 106, 148));
+    transform: scale(1.2);
+  }
+  
+  /* === TECH-CAROUSEL en modo oscuro === */
+.dark .tech-carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3rem 0;
+  width: 100%;
+}
+
+.dark .tech-items-container {
+  width: 100%;
+  max-width: 1000px;
+  overflow: hidden;
+  background-color:rgb(5, 8, 46);       /* Azul marino oscuro */
+  border-radius: 20px;
+  padding: 50px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Sombra más profunda */
+  position: relative;
+  display: flex;
+  color: #e1e1e1;                  /* Texto claro */
+}
+
+.dark .tech-items {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+.dark .tech-item {
+  min-width: 300px;
+  flex-shrink: 0;
+  text-align: center;
+  padding: 20px;
+}
+
+.dark .tech-item:hover {
+  transform: scale(1.15);
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+
+.dark .tech-item img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
+
+.dark .tech-item h3 {
+  margin-top: 16px;
+  font-size: 1.5rem;
+  white-space: nowrap;
+  overflow: visible;
+  color: #e1e1e1;                  /* Texto claro */
+}
+
+.dark .carousel-arrows {
+  margin-top: 50px;
+  display: flex;
+  gap: 50px;
+}
+
+.dark .arrow {
+  background-color: #274766;       /* Botón en azul oscuro */
+  border: none;
+  color: #e1e1e1;                  /* Icono claro */
+  font-size: 2rem;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dark .arrow:hover {
+  background: linear-gradient(45deg, #274766, #40c9ff); /* Degradado azul-cyan */
+  transform: scale(1.2);
+}
+
+  
+  

@@ -1,0 +1,110 @@
+/* Hero.css */
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 1rem;             
+  padding: 1.5rem;        
+  margin: 1.5rem auto;     
+  background-color:rgb(103, 87, 112);
+  color: #fff;            
+  border-radius: 8px;    
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+  margin-top: 1rem;     
+  margin-left: 14rem;       
+  margin-right: 10rem;      
+}
+
+.hero__image {
+  width: 320px;          
+  height: 320px;
+  object-fit: cover;
+  border-radius: 50%; 
+}
+
+.hero__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;            
+  text-align: left;  
+  margin-left: 2rem;     
+}
+
+.hero__content h1 {
+  font-size: 2.8rem;     
+  margin-bottom: 20px;
+}
+
+.hero__content h2 {
+  font-size: 2.1rem;
+  transition: opacity 0.5s ease;       
+  margin: 0;
+}
+
+.hero__content p {
+  font-size: 1.1rem;    
+  line-height: 1.4;
+  margin: 0;
+}
+
+.hero__content a {
+  color: #ffa9a9;
+}
+
+/* === HERO en modo oscuro === */
+.dark .hero {
+  display: flex;
+  align-items: center;
+  gap: 1rem;             
+  padding: 1.5rem;        
+  margin: 1.5rem auto;     
+  background-color:rgb(5, 8, 46);          /* Antes rgb(103,87,112) */
+  color: #e1e1e1;                      /* Texto claro */
+  border-radius: 8px;    
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4); /* Sombra más intensa */
+  margin-top: 1rem;     
+  margin-left: 14rem;       
+  margin-right: 10rem;      
+}
+
+.dark .hero__image {
+  width: 320px;          
+  height: 320px;
+  object-fit: cover;
+  border-radius: 50%; 
+}
+
+.dark .hero__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;            
+  text-align: left;  
+  margin-left: 2rem;     
+}
+
+.dark .hero__content h1 {
+  font-size: 2.8rem;     
+  margin-bottom: 20px;
+  /* hereda color de .hero (#e1e1e1) */
+}
+
+.dark .hero__content h2 {
+  font-size: 2.1rem;
+  transition: opacity 0.5s ease;       
+  margin: 0;
+  /* hereda color de .hero (#e1e1e1) */
+}
+
+.dark .hero__content p {
+  font-size: 1.1rem;    
+  line-height: 1.4;
+  margin: 0;
+  /* hereda color de .hero (#e1e1e1) */
+}
+
+.dark .hero__content a {
+  color: #40c9ff;      /* Antes #ffa9a9, ahora cyan para contraste */
+}
+
+

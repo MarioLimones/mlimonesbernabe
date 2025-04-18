@@ -1,0 +1,215 @@
+.proyectos h2 {
+    font-size: 2rem;        /* Aumenta el tamaño */
+    color: #fff;          /* Cambia el color a blanco */
+    margin-bottom: 1.5rem;    /* Espacio bajo el título */
+    letter-spacing: 1px;      /* Espaciado de letras */
+  }
+  
+  .projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 6rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: stretch;    /* Fuerza todas las tarjetas a tener la misma altura */
+  }
+  
+  .project-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;            /* Hace que la tarjeta ocupe toda la altura de su celda */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  }
+  
+  .project-image {
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 ratio */
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .project-content {
+    padding: 1rem;
+    flex: 1;                 /* Ocupa todo el espacio restante */
+    display: flex;
+    flex-direction: column;
+    background-color:rgb(162, 140, 163);
+  }
+  
+  .project-content h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.5rem;
+    color: #fff;
+  }
+  
+  .project-content p {
+    flex: 1;
+    font-size: 1rem;
+    color: #fff;
+    line-height: 1.4;
+  }
+  
+  .project-button {
+    margin-top: auto;        /* Empuja el botón al fondo de la tarjeta */
+    text-align: center;
+    padding: 0.5rem;
+    background-color: rgb(126, 97, 124);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .project-button:hover {
+    background-color: rgb(119, 101, 118);
+    transform: scale(1.03);
+    color: rgb(218, 186, 219);
+  }
+  
+  /* Introducción en la sección Proyectos */
+  #proyectos .project-description {
+    max-width: 800px;
+    margin: 1rem auto 2rem;  /* Un único margin para evitar duplicados */
+    font-size: 1.1rem;
+    line-height: 1.7;
+    text-align: left;
+    color: #fff;
+  }
+  
+  /* === Proyectos en modo oscuro === */
+  .dark .proyectos h2 {
+    /* Conserva tamaño y espaciado, si lo deseas */
+    color: #ffffff;         /* Blanco puro sobre navy */
+  }
+  
+  .dark #proyectos .project-description {
+    color: #d0d0d0;         /* Gris claro para el texto */
+  }
+  
+  .dark .projects-container {
+    background-color: transparent; /* Transparente para ver el fondo global */
+    box-shadow: none;              /* Sin sombra interna */
+  }
+  
+  .dark .project-content {
+    background-color: #273a5a; /* Morado-azulado oscuro */
+  }
+  
+  .dark .project-content h3,
+  .dark .project-content p {
+    color: #e1e1e1;         /* Texto claro */
+  }
+  
+  .dark .project-button {
+    background:rgb(5, 8, 46);
+    color: #fff;
+  }
+  
+  .dark .project-button:hover {
+    background-color: rgb(119, 101, 118);
+    transform: scale(1.03);
+    color: rgb(255, 255, 255);
+  }
+
+  @media (max-width: 992px) {
+    .projects-container {
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 3rem;
+      padding: 0 2rem;
+    }
+    .proyectos h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1.2rem;
+    }
+    #proyectos .project-description {
+      font-size: 1rem;
+      max-width: 700px;
+    }
+    .project-card {
+      margin: 0 auto;
+      max-width: 90%;
+    }
+  }
+  
+  /* Tablets y móviles grandes (≤ 768px) */
+  @media (max-width: 768px) {
+    .projects-container {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      padding: 0 1.5rem;
+    }
+    .proyectos h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    }
+    #proyectos .project-description {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      max-width: 100%;
+      padding: 0 1rem;
+    }
+    .project-card {
+      display: flex;
+      flex-direction: column;
+    }
+    .project-image {
+      padding-top: 60%; /* menos alto para ahorrar espacio */
+    }
+    .project-content {
+      padding: 0.75rem;
+    }
+    .project-content h3 {
+      font-size: 1.3rem;
+    }
+    .project-content p {
+      font-size: 0.9rem;
+    }
+    .project-button {
+      padding: 0.6rem;
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Móviles pequeños (≤ 576px) */
+  @media (max-width: 576px) {
+    .proyectos h2 {
+      font-size: 1.4rem;
+      margin-bottom: 0.8rem;
+    }
+    #proyectos .project-description {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      padding: 0 0.5rem;
+    }
+    .projects-container {
+      gap: 1.5rem;
+      padding: 0 1rem;
+    }
+    .project-image {
+      padding-top: 75%; /* ajusta proporción si faltan detalles */
+    }
+    .project-content {
+      padding: 0.5rem;
+    }
+    .project-content h3 {
+      font-size: 1.1rem;
+    }
+    .project-content p {
+      font-size: 0.85rem;
+    }
+    .project-button {
+      padding: 0.5rem;
+      font-size: 0.85rem;
+    }
+  }
